@@ -5,3 +5,7 @@ export interface Product extends BaseModel{
     unitPrice: number;
     unitsInStock : number; 
 }
+
+
+
+//service, network
