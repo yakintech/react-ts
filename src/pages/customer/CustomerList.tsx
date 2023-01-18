@@ -13,9 +13,10 @@ function CustomerList() {
         let customerService = new CustomerService();
 
         customerService.getAll()
-            .then(data => {
-                setcustomers(data);
+            .then(res => {
+                setcustomers(res);
             })
+          
 
     }, []);
 
@@ -24,13 +25,13 @@ function CustomerList() {
         //instance
         let customerService = new CustomerService();
         
-        customerService.delete(id)
-            .then(res => {
-                customerService.getAll()
-                    .then(data => {
-                        setcustomers(data);
-                    })
-            })
+        // customerService.delete(id)
+        //     .then(res => {
+        //         customerService.getAll()
+        //             .then(data => {
+        //                 setcustomers(data);
+        //             })
+        //     })
 
 
 
@@ -38,7 +39,7 @@ function CustomerList() {
     return (<>
         <ul>
             {
-                customers && customers.map(item => <li>{item.companyName}</li>)
+                customers && customers.map(item => <li key={item.id}>{item.companyName}</li>)
             }
         </ul>
     </>

@@ -10,10 +10,7 @@ function ProductList() {
 
     let productService = new ProductService();
 
-    productService.getAll()
-      .then(res => {
-        setproducts(res);
-      })
+
 
   }, [])
 

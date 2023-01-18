@@ -1,15 +1,18 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { Product } from './models/api/Product';
-import { EnumApiStatus } from './models/utils/EnumApiStatus';
+import { useEffect } from 'react'
 import CustomerList from './pages/customer/CustomerList';
+import { CustomerService } from './service/CustomerService';
+import { ProductService } from './service/ProductService';
+
+
 
 function App() {
 
 
 
+
   return (<>
-    <CustomerList/>
+  <h1>Hoppala</h1>
+    <CustomerList />
   </>
   )
 }
